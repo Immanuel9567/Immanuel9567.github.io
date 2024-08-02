@@ -5,12 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>V8's Website</title>
         <link rel="stylesheet" href="/static/css/styles.css">
-</head>
-<body>
+
 	<nav>
 		<ul class="menu-bar">
-			<li><a href="{{ url_for('gallery_page') }}">Gallery</a></li>
-			<li><a href="{{ url_for('devices_page') }}">My Devices</a></li>
+			<li><a href="{{ url_for("gallery") }}">Gallery</a></li>
+			<li><a href="{{ url_for("mydevices") }}">My Devices</a></li>
 		</ul>
 	</nav>
 	<h1>About Me</h1>

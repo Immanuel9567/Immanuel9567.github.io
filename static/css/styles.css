@@ -31,3 +31,32 @@ img {
     margin: 10px; /* im not sure what exactly this does. but, without this, those images from CPM would be very close. */
     border: 5px solid; /* this adds a 5px thick white (by default) border, around the image */
 }
+
+nav {
+	background-color: #333;
+}
+
+.menu-bar {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.menu-bar li {
+	margin: 0;
+	padding: 0;
+}
+
+.menu-bar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+
+.menu-bar li a:hover {
+	background-color: #575757;
+}

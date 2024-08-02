@@ -7,11 +7,11 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 def index():
     return render_template("index.html")
 
-@app.route("gallery")
+@app.route("/gallery")
 def gallery_page():
     return render_template("gallery.html")
 
-@app.route("mydevices")
+@app.route("/mydevices")
 def devices_page():
     return render_template("mydevices.html")
 

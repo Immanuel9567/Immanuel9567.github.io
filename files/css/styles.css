@@ -11,6 +11,10 @@ h1::first-letter { /* change the first letter color of all h1 tags */
 	color: #3467eb;
 }
 
+.colored { /* basically the same thing as above, but can be done for any tag. */
+	color: #3467eb;
+}
+
 p {
 	padding: 10px;
 }
@@ -30,34 +34,4 @@ img {
     width: 95%; /* this controls the size. without this, the images will look bad */
     margin: 10px; /* im not sure what exactly this does. but, without this, those images from CPM would be very close. */
     border: 5px solid; /* this adds a 5px thick white (by default) border, around the image */
-}
-
-nav {
-	background-color: #212121;
-	padding: 5px;
-}
-
-nav ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-}
-
-nav ul li {
-	margin-right: 20px;
-}
-
-nav a.button {
-	display: inline-block
-	padding: 10px 20px;
-	font-size: 16px;
-	color: white;
-	background-color: #007BFF;
-	text-decoration: none;
-	border-radius: 5px;
-}
-
-nav a.button:hover {
-	background-color: #0056b3;
 }

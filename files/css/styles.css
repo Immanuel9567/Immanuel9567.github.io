@@ -50,3 +50,17 @@ img {
 	background-color: #314987;
 }
 
+.btn-ghost {
+	background-color: transparent;
+	color: #3467eb;
+	padding: 5px 5px;
+	border: 2px solid #3467eb;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.btn-ghost:hover {
+	background-color: #314987;
+}
+

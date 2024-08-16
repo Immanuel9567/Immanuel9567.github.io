@@ -35,3 +35,18 @@ img {
     margin: 10px; /* im not sure what exactly this does. but, without this, those images from CPM would be very close. */
     border: 5px solid; /* this adds a 5px thick white (by default) border, around the image */
 }
+
+.btn-rounded {
+	background-color: #2ecc71;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	font-size:16px;
+	cursor: pointer;
+}
+
+.btn-rounded:hover {
+	background-color: #27ae60;
+}
+

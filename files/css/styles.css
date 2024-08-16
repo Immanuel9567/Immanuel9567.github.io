@@ -37,16 +37,16 @@ img {
 }
 
 .btn-rounded {
-	background-color: #2ecc71;
+	background-color: #3467eb;
 	color: white;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	border: none;
-	border-radius: 50px;
+	border-radius: 30px;
 	font-size:16px;
 	cursor: pointer;
 }
 
 .btn-rounded:hover {
-	background-color: #27ae60;
+	background-color: #314987;
 }
 

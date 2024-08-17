@@ -66,3 +66,49 @@ text-decoration: none;
 	background-color: #314987;
 }
 
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader {
+	border: 8px solid #3467eb;
+	border-top: 8px solid #3498db;
+	border-radius: 50%;
+	height: 40PX;
+	height: 40PX;
+	animation: spin 1s linear infinite;
+}
+
+.fade-in {
+	opacity: 0;
+	animation: fadeIn ease 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+	gap: 20px;
+}
+
+.grid-item {
+	background-color: #212121;
+	color: black;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+}

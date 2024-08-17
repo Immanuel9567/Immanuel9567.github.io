@@ -86,22 +86,21 @@ text-decoration: none;
 
 .fade-in {
 	opacity: 0;
-	animation: fadeIn ease 1.5s;
-	animation-fill-mode: forwards;
+	animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-	0% {
+	from {
 		opacity: 0;
 	}
-	100% {
+	to {
 		opacity: 1;
 	}
 }
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 20px;
 }
 

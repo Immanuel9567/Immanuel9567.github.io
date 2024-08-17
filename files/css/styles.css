@@ -101,13 +101,13 @@ text-decoration: none;
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 20px;
+	gap: 10px;
 }
 
 .grid-item {
 	background-color: #212121;
-	color: black;
+	color: white;
 	padding: 20px;
-	border-radius: 10px;
 	text-align: center;
+	border-radius: 5px;
 }

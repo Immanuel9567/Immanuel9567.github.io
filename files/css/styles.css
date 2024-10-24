@@ -67,6 +67,12 @@ text-decoration: none;
 }
 
 .container {
-    padding: 5%;
+    padding: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
 }
 

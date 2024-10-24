@@ -1,3 +1,7 @@
+html {
+    scroll-behaviour: smooth;
+}
+
 body {
     color: #FFEDE9; /* text color */
     background-color: #000000; /* no need for an explanation */

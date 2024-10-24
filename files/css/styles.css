@@ -65,3 +65,8 @@ text-decoration: none;
 .btn-ghost:hover {
 	background-color: #314987;
 }
+
+.container {
+    padding: 5%;
+}
+

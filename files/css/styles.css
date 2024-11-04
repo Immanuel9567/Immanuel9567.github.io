@@ -41,21 +41,6 @@ img {
     border: 2px solid #000000;
 }
 
-.btn-rounded {
-	background-color: #06406e8e;
-	color: white;
-	padding: 3px 3px;
-	border: none;
-	border-radius: 30px;
-	font-size:16px;
-	cursor: pointer;
-text-decoration: none;
-}
-
-.btn-rounded:hover {
-	background-color: #314987;
-}
-
 .btn-ghost {
 	background-color: #3B1B16;
 	color: #FFFFFF;
@@ -91,7 +76,7 @@ img {
 
 #clock {
     background-color: #3B1B16;
-    color: #FFEDE9;
+    color: #FFFFFF;
     font-size: 18px;
     font-weight: bold;
     padding: 10px;

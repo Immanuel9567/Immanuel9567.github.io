@@ -1,5 +1,20 @@
-function sayHello() {
-    console.log("Thank you!");
-    alert("Hello, Thanks for pressing me!");
+function showTime() {
+    const currentTime = new Date();
+    alert(`Current Time: ${currentTime.toLocaleTimeString()}`);
 }
+
+function updateClock() {
+    const clockElement = document.getElementById("clock");
+    const currentTime = new Date();
+    clockElement.textContent = currentTime.toLocaleTimeString();
+}
+
+function showTime() {
+    const currentTime = new Date();
+    alert(`Current Time: ${currentTime.toLocaleTimeString()}`);
+}
+
+setInterval(updateClock, 1000);
+
+updateClock();
 

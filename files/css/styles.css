@@ -89,3 +89,13 @@ img {
     height: auto;
 }
 
+#clock {
+    background-color: #3B1B16;
+    color: #FFEDE9;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #FFB4A5;
+    border-radius: 9px;
+}
+

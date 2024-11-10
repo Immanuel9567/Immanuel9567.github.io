@@ -36,9 +36,10 @@ hr { /* make the hr, separator, tag less ugly */
 }
 
 img {
-    width: 75%;
+    width: 50%;
     margin: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #FFB4A5;
+    border-radius: 25px;
 }
 
 .btn-ghost {

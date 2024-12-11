@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fastboot 101</title>
+        <link rel="stylesheet" href="/files/css/styletrans.css">
+    </head>
+    <body>
+        <h1>What is Fastboot?</h1>
+        <p>Fastboot is a communication protocol used primarily with Android devices. It is implemented in a command-line interface tool of the same name and as a mode of the bootloader of Android devices. The tool is included with the Android SDK package and used primarily to modify the flash filesystem via a USB connection from a host computer. It requires that the device be started in Fastboot mode. If the mode is enabled, it will accept a specific set of commands, sent through USB bulk transfers. For More info, click <a href="https://en.wikipedia.org/wiki/Fastboot" class="btn-ghost" target="_blank">"about Fastboot"</a></p>
+
+        <h1>What do i need?</h1>
+        <ul>
+            <li> A Windows/Linux Computer.</li>
+            <li> Windows:- Your adb/fastboot drivers. Link to <a href="https://xdaforums.com/t/official-tool-windows-adb-fastboot-and-drivers-15-seconds-adb-installer-v1-4-3.2588979/" class="btn-ghost" target="_blank">Guide + File link</a></li>
+            <li>Enabling USB debugging in Developer Options. (Settings/System/Developer Settings/USB Debugging)</li>
+            <li>A reliable Internet Connection</li>
+            <li>Your Device</li>
+        </ul>
+        <p>Open your terminal (CMD on Windows "win key + R and type cmd and click enter") and run 'adb devices' with or without '/' while your device is powered on and unlocked. Accept the token confirmation and run again so it'll be authorised. Linux users may need to add 'sudo' for it to work. Next run 'adb reboot recovery'/'fastboot'/'bootloader' and wait.</p>
+        <h2>Bootloader Commands</h2>
+        <p>Tip: In bootloader, you use 'fastboot' instead of 'adb' as the applicable name is 'fastboot'</p>
+        <p>Flashing operations here are mostly for disabling vbmeta, flashing /boot, logo.bin etc.</p>
+        <h2>Fastbootd</h2>
+        <p>Not to be confused with 'fastboot', fastbootd is completely different as you flash mostly image files to their respective partitions such as /vendor, /super, /product etc. You will end up here very often!</p>
+        <h1>Unlocking Bootloader: YOU WILL LOOSE YOUR DATA</h1>
+        <p>You can not customize your device with mods without unlocking your bootloader as this is where the device carries out it's verification and file integrity checks. Hence, you have to unlock it, but you must also disable vbmeta. More on that later. Please make a backup of your important data before doing this!.</p>
+        <p>To unlock your bootloader, you first run 'adb devices' to be sure your device is recognized, now run 'adb reboot bootloader' to go straight in. Note: some devices need you to reboot to recovery first and manually select bootloader before they can be recognized). Now run 'fastboot devices' just to be sure. following that, run 'fastboot flashing unlock' and use your volume button to select 'yes'. Congrats! your bootloader has been unlocked. The device will erase /data as a security protocol.</p>
+        <h2>Overview</h2>
+        <ul>
+            <li>adb reboot bootloader</li>
+            <li>fastboot devices</li>
+            <li>fastboot flashing unlock</li>
+        </ul>
+        <p>Device will wipe data and reboot!</p>
+
+        <a href="/transsion/transsionhub.html" class="btn-ghost">Back</a>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning About Partitions</title>
+        <link rel="stylesheet" href="/files/css/styletrans.css">
+    </head>
+    <body>
+        <a href="/transsion/guides.html" class="btn-ghost">Back</a>
+        <h1>System Partitions: All you need to know!</h1>
+        <p>There are many partitions in your device that make up the firmware. The partitions in your device include /system, /vendor, /product, /media, /boot etc. These partitions can be read and written. You can only write a partition if your system is mounted Read/Write (RW). If your device is mounted Read Only (RO) which is by default, the only way to write any sensitive partition is through fastboot.</p>
+        <h2>Why would i want to write a partition?</h2>
+        <p>To write a partition is basically flashing that partition either to fix it, or to change it's contents. Some use case scenarios are</p>
+        <ul>
+            <li>Flashing system.img</li>
+            <li>Flashing Vendor.img</li>
+            <li>Flashing boot.img</li>
+        </ul>
+        <p>The list goes on. Partitions have sizes and if the file/.img you wish to flash is bigger than the allocated size, it will not fit and the operation will automatically aborted. You may face this issue with /system especially when trying to flash a Generic System Image (GSI). Primarily, the reason for meddling with partitions is to fix them by reflashing.</p>
+        <p>One of the most uses of this is /vendor mostly when you reflash your firmware and you get the "can't connect to camera" error in your camera. Reflashing /vendor often fixes this issue, this is not the only solution, but it's much faster to try and can be done in fastbootd.</p>
+    </body>
+</html>

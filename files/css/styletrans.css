@@ -36,7 +36,7 @@ hr { /* make the hr, separator, tag less ugly */
 }
 
 img {
-    width: 70%;
+    width: 50%;
     margin: 10px;
     border: 2px solid #F2D9F7;
     border-radius: 25px;
@@ -58,7 +58,7 @@ text-decoration: none;
 }
 
 .container {
-    padding: 30%;
+    padding: 50%;
 }
 
 .center-text {

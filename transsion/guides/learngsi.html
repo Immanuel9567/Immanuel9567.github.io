@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GSI Basics</title>
+        <link rel="stylesheet" href="/files/css/styletrans.css">
+    </head>
+    <body>
+        <h1>A help Guide to using GSIs</h1>
+        <h2>What is a GSI?</h2>
+        <p>Simply put, A GSI is a system image (.img) that can be run on <a href="https://www.google.com/search?q=project+treble&oq=project+treble&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCTEwMjU3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" class="btn-ghost" target="_blank">treble</a> enabled devices.</p>
+        <p>GSIs became the solution for the lack of custom ROM support for Mediatek powered devices. This method of customization has many perks, with few disadvantages. GSIs, not intended to be daily driven, were mainly for testing purposes for the development of a fully functional ROM. Passionate android developers decided to work on them, making them less buggy, large support and more features with little to no utility impacts (some cases). GSIs began from Android 8 till the already developing 15. A determining factor of support is kernel version and Vendor compatibility.</p>
+        <p>GSIs are primarily based on Google's Pixel Experience Software. Very light, yet effective with beautiful "pill" themed UI.</p>
+
+        <h1>How can i flash a GSI?</h1>
+        <p>To Flash a GSI, you need:</p>
+        <ul>
+            <li>Your Android Device</li>
+            <li>A Computer/Laptop</li>
+            <li>Proper setup of necessary drivers and adb recognition. Refer to <a href="/transsion/guides/learnfastboot.html" class="btn-ghost">this Guide</a> on how to get things working.</li>
+            <li>A stable internet connection.</li>
+            <li>Your 'system.img' ready for flashing. (Make sure the file ends with ".img" and not ".xz" as most GSIs are compressed)</li>
+        </ul>
+        <p>Now, you're ready to flash!</p>
+        <p>To flash the image, you must successfully boot into fastbootd. To avoid conflicts, you must erase the already existing system image from your previous OS, be it stock or custom. now, to flash the image, for windows users, make sure the file is renamed to'system.img' for easy use and in the adb/fastboot folder. For linux users, make sure the file is in the directory you open the terminal in.</p>
+        <h1>Commands</h1>
+        <ul>
+            <li>To erase /system, run 'fastboot erase system' and it will do as mentioned.</li>
+        <li>To flash the .img file, run 'fastboot flash system <a class=".colored">system.img</a>'. If you run into the "not enough space to resize the partition" error, then you will have to run 'fastboot delete-logical-partition product' and 'fastboot delete-logical-partition system_ext'. Don't worry, these commands are totally safe.</li>
+

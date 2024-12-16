@@ -26,6 +26,10 @@
         <p>To flash the image, you must successfully boot into fastbootd. To avoid conflicts, you must erase the already existing system image from your previous OS, be it stock or custom. now, to flash the image, for windows users, make sure the file is renamed to'system.img' for easy use and in the adb/fastboot folder. For linux users, make sure the file is in the directory you open the terminal in.</p>
         <h1>Commands</h1>
         <ul>
-            <li>To erase /system, run 'fastboot erase system' and it will do as mentioned.</li>
-        <li>To flash the .img file, run 'fastboot flash system <a class=".colored">system.img</a>'. If you run into the "not enough space to resize the partition" error, then you will have to run 'fastboot delete-logical-partition product' and 'fastboot delete-logical-partition system_ext'. Don't worry, these commands are totally safe.</li>
+		<li>To erase /system, run <a class=".colored">fastboot erase system</a> and it will do as mentioned.</li>
+		<li>To flash the .img file, run <a class=".colored">fastboot flash system system.img</a>'. If you run into the "not enough space to resize the partition" error, then you will have to run <a class=".colored">fastboot delete-logical-partition product</a> and <a class=".colored">fastboot delete-logical-partition system_ext</a>. Don't worry, these commands are totally safe.</li>
+		<li>After freeing up space in the system partition, try again and run <a class=".colored">fastboot flash system system.img</a> and it should begin the flashing process. The time taken depends on the size of the GSI you flashed, the bigger the file, the more flash packets you'll have.</li>
+		<li>Once it's completed, you have to format /data with <a class=".colored">fastboot -w</a>. You still need to "reboot recovery" and factory reset to make sure /data is properly formatted. Once done, you can now reboot and enjoy your new system!</li>
+	</ul>
+	<h1>What NOT to do</h1>
 

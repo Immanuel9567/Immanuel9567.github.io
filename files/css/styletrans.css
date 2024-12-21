@@ -58,23 +58,31 @@ text-decoration: none;
 }
 
 .container {
-    padding: 20%;
+    padding: 50%;
 }
 
 .center-text {
     text-align: center;
 }
 
-.image-text-wrapper {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 5px;
-    align-items: center;
-img {
-    width: 50px;
-    height: auto;
+.resource-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px; /* Space between items */
 }
 
+.resource-item {
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 10px; /* Space between image and text */
+}
+
+img {
+    width: 60px; /* Adjust as needed */
+    height: auto;
+    display: block; /* Prevent extra inline space */
+}
 .popup-button {
     padding: 10px 20px;
     font-size: 16px;

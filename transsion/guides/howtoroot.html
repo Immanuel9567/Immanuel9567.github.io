@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to Root</title>
+        <link rel="stylesheet" href="/files/css/styletrans.css">
+    </head>
+    <body>
+        <a href="/transsion/guides.html" class="btn-ghost">Back</a>
+        <h1>How to Root your device!</h1>
+        <div id="magiskrepo">
+        <h2>Root Method: <a href="https://github.com/topjohnwu/Magisk" class="btn-ghost" target="_blank">Magisk</a></h2>
+        </div>
+        <h1>Why would i want Root?</h1>
+        <p>Root is basically obtaining Super User Permission to do pretty much anything at all in your Android device. From system-level debloating to major UI modifications and so on. Rooting has perks, lots of them, but it also has it's downsides such as voiding your warranty, loss of safetynet and playintegrity and blocked access to banking applications. These problems do have workarounds but they don't work all the time on all the devices.</p>
+        <h1>Where do i start?</h1>
+        <h2>YOU WILL NEED A COMPUTER!</h2>
+        <h2>YOUR BOOTLOADER MUST BE UNOCKED!</h2>
+        <ul>
+            <li>First off, download the latest stable magisk from the <a href="#magiskrepo" class="btn-ghost">Repository</a></li>
+            <li>Now you will need the <a class=".colored">boot.img</a> of your device which can be by downloading your device firmware.</li>
+            <li>Put the <a class=".colored">boot.img</a> file into your device and launch the Magisk application.</li>
+            <li>Tap the "Install" button and select file for patching</li>
+            <li>Search for your file and tap it.</li>
+            <li>Once the patching process is complete, copy the file to your Computer along with the <a class=".colored">vbmeta.img</a> located also in your firmware. This will be used to disable AVB (Android Verified Boot).</li>
+            <li>On your computer, put both image files in a folder and open your terminal in that folder.</li>
+            <li>Connect your device and reboot to bootloader</li>
+            <li>You must run the AVB disabling command before and after the boot image flashing command to avoid bootlooping</li>
+            <li>run <a class=".colored">fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img</a> to disable AVB</li>
+            <li>Now run <a class=".colored">fastboot flash boot (patchedboot).img</li>
+            <li>Run the AVB command again and then, <a class=".colored">fastboot reboot</a></li>
+        </ul>
+        <p>With all that done, you should be booted with Magisk properly installed.</p>
+        <a href="/transsion/guides.html" class="btn-ghost">Back</a>
+    </body>
+</html>
+

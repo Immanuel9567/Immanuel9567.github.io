@@ -14,6 +14,7 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: start;
+    overflow-x: hidden; /* Prevent unintended horizontal scroll */
 }
 
 h1::first-letter { /* change the first letter color of all h1 tags */

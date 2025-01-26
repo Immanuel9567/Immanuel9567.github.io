@@ -87,9 +87,9 @@ img {
     display: flex;
     align-items: center; /* Align text and image vertically */
     gap: 10px; /* Space between image and text */
-    margin: 0 auto;
-    width: 90%;
-    max-width: 980px;
+    margin: 30;
+    width: 80%;
+    max-width: 700px;
 }
 
 img {

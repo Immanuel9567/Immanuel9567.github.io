@@ -81,3 +81,9 @@ img {
     border-radius: 9px;
 }
 
+.container {
+    max-width: 100%; /* Avoid overflowing */
+    margin: 0 auto; /* Center the container */
+    padding: 0 16px; /* Add breathing space on small screens */
+}
+

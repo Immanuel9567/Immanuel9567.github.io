@@ -9,7 +9,11 @@ body {
     max-width: 70em; /* this too...? */
     font: 1.3em/1.65 sans-serif; /* font size and type */
     font-family: 'Open Sans', sans-serif;
-    padding: 0 0.92em 3.24em; /* this also controls padding...? */
+    padding: 10px; /* this also controls padding...? */
+    display: inline-block;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
 }
 
 h1::first-letter { /* change the first letter color of all h1 tags */
@@ -36,8 +40,9 @@ hr { /* make the hr, separator, tag less ugly */
 }
 
 img {
-    width: 50%;
-    margin: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
     border: 2px solid #F2D9F7;
     border-radius: 25px;
 }
@@ -45,16 +50,25 @@ img {
 .btn-ghost {
 	background-color: #F1A8FF;
 	color: #000000;
-	padding: 3px 3px;
-	border: 2px solid #F1A8FF;
+	padding: 5px 5px;
+	border: 1px solid #F1A8FF;
 	border-radius: 9px;
-	font-size: 18px;
+	font-size: 1rem;
 	cursor: pointer;
 text-decoration: none;
+white-space: nowrap;
+overflow: visible;
 }
 
 .btn-ghost:hover {
 	background-color: #F2D9F7;
+}
+
+@media (min-width: 768px) {
+    .btn-ghost {
+        padding: 15px 40px;
+        font-size: 1.2rem;
+    }
 }
 
 .center-text {
@@ -72,25 +86,27 @@ text-decoration: none;
     display: flex;
     align-items: center; /* Align text and image vertically */
     gap: 10px; /* Space between image and text */
+    margin: 0 auto;
+    width: 90%;
+    max-width: 900px;
 }
 
 img {
-    width: 60px; /* Adjust as needed */
+    max-width: 190px; /* Adjust as needed */
     height: auto;
     display: block; /* Prevent extra inline space */
 }
-.popup-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+.scaled-image {
+    transform: scale(1.5);
 }
 
-.popup-button:hover {
-    background-color: #000000;
+.center-image {
+    text-align: center;
 }
+
+img {
+    display: inline-block;
+}
+
 

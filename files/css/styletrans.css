@@ -111,8 +111,7 @@ img {
 }
 
 .container {
-    max-width: 75%; /* Avoid overflowing */
+    max-width: 100%; /* Avoid overflowing */
     margin: 0 auto; /* Center the container */
-    padding: 0 5px; /* Add breathing space on small screens */
 }
 

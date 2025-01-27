@@ -9,7 +9,12 @@ body {
     max-width: 70em; /* this too...? */
     font: 1.3em/1.65 sans-serif; /* font size and type */
     font-family: 'Open Sans', sans-serif;
-    padding: 0 0.92em 3.24em; /* this also controls padding...? */
+    padding: 10px; /* this also controls padding...? */
+    display: inline-block;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+    overflow-x: hidden; /* Prevent unintended horizontal scroll */
 }
 
 h1::first-letter { /* change the first letter color of all h1 tags */
@@ -25,7 +30,7 @@ p {
 }
 
 a { /* customizing the a tag appearance */
-    color: #3d82ad; /* change the color of the link */
+    color: #F1A8FF; /* change the color of the link */
 }
 
 hr { /* make the hr, separator, tag less ugly */
@@ -45,12 +50,14 @@ img {
 .btn-ghost {
 	background-color: #F1A8FF;
 	color: #000000;
-	padding: 3px 3px;
-	border: 2px solid #F1A8FF;
+	padding: 5px 5px;
+	border: 1px solid #F1A8FF;
 	border-radius: 9px;
-	font-size: 18px;
+	font-size: 1rem;
 	cursor: pointer;
-text-decoration: none;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .btn-ghost:hover {
@@ -84,6 +91,5 @@ img {
 .container {
     max-width: 100%; /* Avoid overflowing */
     margin: 0 auto; /* Center the container */
-    padding: 0 16px; /* Add breathing space on small screens */
 }
 

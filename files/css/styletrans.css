@@ -65,7 +65,7 @@ img {
 	background-color: #F2D9F7;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .btn-ghost {
         padding: 5px 5px;
         font-size: 1.2rem;

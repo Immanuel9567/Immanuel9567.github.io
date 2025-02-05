@@ -8,13 +8,26 @@
     </head>
     <body>
         <a href="/transsion/guides.html" class="btn-ghost">Back</a>
-        <h1>A help Guide to using GSIs</h1>
-        <h2>What is a GSI?</h2>
+        <h1 class="center-text">A HELP GUIDE TO GSIs</h1>
+        <h3>Skip to Topic</h3>
+        <ul>
+            <li><a href="#howtoflash" class="btn-ghost">Flashing Steps</a></li>
+            <li><a href="#dontdo" class="btn-ghost">Things to Avoid</a></li>
+        </ul>
+        <h2 class="center-text">What is a GSI?</h2>
         <p>Simply put, A GSI is a system image (.img) that can be run on <a href="https://www.google.com/search?q=project+treble&oq=project+treble&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCTEwMjU3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" class="btn-ghost" target="_blank">treble</a> enabled devices.</p>
         <p>GSIs became the solution for the lack of custom ROM support for Mediatek powered devices. This method of customization has many perks, with few disadvantages. GSIs, not intended to be daily driven, were mainly for testing purposes for the development of a fully functional ROM. Passionate android developers decided to work on them, making them less buggy, large support and more features with little to no utility impacts (some cases). GSIs began from Android 8 till the already developing 15. A determining factor of support is kernel version and Vendor compatibility.</p>
         <p>GSIs are primarily based on Google's Pixel Experience Software. Very light, yet effective with beautiful "pill" themed UI.</p>
 
-        <h1>How can i flash a GSI?</h1>
+        <h1 class="center-text">Types of GSis</h1>
+        <ul>
+            <li><h2>GSIs:</h2>Can boot on all devices, may contain bugs.</li>
+            <li><h2>S-GSIs:</h2>Semi-GSIs (usually Ports from official builds) are GSis but not for all devices, they have requirements that must be met in order to successfully boot into system such as Modified Vendors, A Permissive Kernel, Manufacturer Specific etc.</li>
+            <li><h2>Modified GSIs:</h2>These are GSIs that are improved on to accommodate missing features or to add new ones to a specific device model. This can be maintained by a single developer, or a group.</li>
+        </ul>
+
+        <div id="howtoflash">
+        <h1 class="center-text">How can i flash a GSI?</h1>
         <p>To Flash a GSI, you need:</p>
         <ul>
             <li>Your Android Device</li>
@@ -25,14 +38,23 @@
         </ul>
         <p>Now, you're ready to flash!</p>
         <p>To flash the image, you must successfully boot into fastbootd. To avoid conflicts, you must erase the already existing system image from your previous OS, be it stock or custom. now, to flash the image, for windows users, make sure the file is renamed to 'system.img' for easy use and in the adb/fastboot folder. For linux users, make sure the file is in the directory you open the terminal in.</p>
-        <h1>Commands</h1>
+        <h1 class="center-text">Commands</h1>
         <ul>
-            <li>To erase /system, run<a class=".colored">'fastboot erase system'</a> and it will do as mentioned.</li>
-            <li>To flash the .img file, run <a class=".colored">'fastboot flash system system.img</a>'. If you run into the "not enough space to resize the partition" error, then you will have to run <a class=".colored">'fastboot delete-logical-partition product'</a> and <a class=".colored">'fastboot delete-logical-partition system_ext'</a>. Don't worry, these commands are totally safe.</li>
+            <li>To erase /system, run <a class=".colored">'fastboot erase system'</a> and it will do as mentioned.</li>
+            <li>To flash the .img file, run <a class=".colored">'fastboot flash system system.img'</a>. If you run into the "not enough space to resize the partition" error, then you will have to run <a class=".colored">'fastboot delete-logical-partition product'</a> and <a class=".colored">'fastboot delete-logical-partition system_ext'</a>. Don't worry, these commands are totally safe.</li>
             <li>After all the packets have successfully been written to the device, you must run <a class=".colored">'fastboot -w'</a> to wipe data (doesn't automatically format) then reboot recovery and factory reset to properly format /data</li>
             <li>Once done, you can now reboot system and enjoy. It's that simple!</li>
         </ul>
         <p>Now that your device is all booted up, Are you rooted? If no, then refer to this guide on how to root</p>
+        </div>
+
+        <div id="dontdo">
+        <h1 class="center-text">Things NOT to do and their Consequencies</h1>
+        <p>The following are common mistakes made by rookies in this field:</p>
+        <ul>
+            <li><h2>Do not dirty flash!</h2><p>Dirty Flashing basicaly flashing a "system.img" update to system right on top of the already existing older build. This new build will contain new security patches which will update upon flashing. The Problem is this is also a form of an Incremental Update which means your device is now updated to a newer security patch of e.g. April Patch > May Patch. While this is a good thing, as a GSI user, it's not all fun and Games. Apparently, flashing directly ontop of the previous build results in an irreversible incremental update (so far irreversible on some Transsion devices) and prevents you from booting a GSI with an older Android Version or Security Patch. This takes effect in mainstream system flashing and DSU booting respectively. Any attempt to flash an older build will result in triggering the Anti-Rollback protocol which prevents older builds from booting. To prevent this from happening, it is advised to run <a class=".colored">fastboot erase system</a> and then flashing your desired build. It is best to make a Backup of your data as you may need to wipe /data in some scenarios. It is recommended to perform a clean flash!</p></li>
+        </ul>
+        </div>
         <a href="/transsion/guides.html" class="btn-ghost">Back</a>
     </body>
 </html>

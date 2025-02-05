@@ -41,7 +41,7 @@
         <h1 class="center-text">Commands</h1>
         <ul>
             <li>To erase /system, run <a class=".colored">'fastboot erase system'</a> and it will do as mentioned.</li>
-            <li>To flash the .img file, run <a class=".colored">'fastboot flash system system.img'</a>. If you run into the "not enough space to resize the partition" error, then you will have to run <a class=".colored">'fastboot delete-logical-partition product'</a> and <a class=".colored">'fastboot delete-logical-partition system_ext'</a>. Don't worry, these commands are totally safe.</li>
+            <li>To flash the .img file, run <a class=".colored">'fastboot flash system system.img'</a>. If you run into the "not enough space to resize the partition" error, then you will have to run <a class=".colored">'fastboot delete-logical-partition product'</a> for both slot _a and _b and <a class=".colored">'fastboot delete-logical-partition system_ext'</a> for slot _a and _b. Don't worry, these commands are totally safe.</li>
             <li>After all the packets have successfully been written to the device, you must run <a class=".colored">'fastboot -w'</a> to wipe data (doesn't automatically format) then reboot recovery and factory reset to properly format /data</li>
             <li>Once done, you can now reboot system and enjoy. It's that simple!</li>
         </ul>

@@ -65,7 +65,7 @@ img {
 	background-color: #F2D9F7;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 720px) {
     .btn-ghost {
         padding: 5px 5px;
         font-size: 1.2rem;
@@ -89,11 +89,11 @@ img {
     gap: 10px; /* Space between image and text */
     margin: 30;
     width: 80%;
-    max-width: 700px;
+    max-width: 900px;
 }
 
 img {
-    max-width: 190px; /* Adjust as needed */
+    max-width: 110px; /* Adjust as needed */
     height: auto;
     display: block; /* Prevent extra inline space */
 }

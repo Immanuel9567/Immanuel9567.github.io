@@ -19,8 +19,6 @@ body {
 
 h1::first-letter { /* change the first letter color of all h1 tags */
 	color: #F1A8FF;
-    font-size: clamp(1.8rem, 5vw, 3rem);
-    text-align: center;
 }
 
 .colored { /* basically the same thing as above, but can be done for any tag. */
@@ -170,5 +168,10 @@ h1, h2, h3 {
         width: 95%;
         justify-content: space-around;
     }
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Adjusts dynamically based on screen width */
+    text-align: center;
 }
 

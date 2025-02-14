@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/files/css/styletrans.css">
     </head>
     <body>
-        <a href="/transsion/guides.html" class="btn-ghost">Back</a>
+        <div class="content">
         <h1>How to Root your device!</h1>
         <div id="magiskrepo">
         <h2>Root Method: <a href="https://github.com/topjohnwu/Magisk" class="btn-ghost" target="_blank">Magisk</a></h2>
@@ -17,22 +17,37 @@
         <h1>Where do i start?</h1>
         <h2>YOU WILL NEED A COMPUTER!</h2>
         <h2>YOUR BOOTLOADER MUST BE UNOCKED!</h2>
-        <ul>
+        <h2>DO NOT SKIP STEP 2 AND 3!</h2>
+        <ol>
             <li>First off, download the latest stable magisk from the <a href="#magiskrepo" class="btn-ghost">Repository</a></li>
-            <li>Now you will need the <a class=".colored">boot.img</a> of your device which can be by downloading your device firmware.</li>
-            <li>Put the <a class=".colored">boot.img</a> file into your device and launch the Magisk application.</li>
+            <li>Now you will need the <a class="colored">boot.img</a> of your device which can be by downloading your device firmware.</li>
+            <li>Also in your firmware is the <a class="colored">vbmeta.img</a> file which is REQUIRED to DISABLE VERITY CHECKS/BOOT VERIFICATION!</li>
+            <li>Put the <a class="colored">boot.img</a> file into your device and launch the Magisk application.</li>
             <li>Tap the "Install" button and select file for patching</li>
             <li>Search for your file and tap it.</li>
-            <li>Once the patching process is complete, copy the file to your Computer along with the <a class=".colored">vbmeta.img</a> located also in your firmware. This will be used to disable AVB (Android Verified Boot).</li>
+            <li>Once the patching process is complete, copy the file to your Computer along with the <a class="colored">vbmeta.img</a> located also in your firmware. This will be used to disable AVB (Android Verified Boot).</li>
             <li>On your computer, put both image files in a folder and open your terminal in that folder.</li>
             <li>Connect your device and reboot to bootloader</li>
             <li>You must run the AVB disabling command before and after the boot image flashing command to avoid bootlooping</li>
-            <li>run <a class=".colored">fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img</a> to disable AVB</li>
-            <li>Now run <a class=".colored">fastboot flash boot (patchedboot).img</li>
-            <li>Run the AVB command again and then, <a class=".colored">fastboot reboot</a></li>
-        </ul>
+            <li><div id="verity">run <a class="colored">fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img</a> to disable AVB</div></li>
+            <li>Now run <a class="colored">fastboot flash boot (patchedboot).img</a></li>
+            <li>Run the AVB command again and then, <a class="colored">fastboot reboot</a></li>
+        </ol>
         <p>With all that done, you should be booted with Magisk properly installed.</p>
-        <a href="/transsion/guides.html" class="btn-ghost">Back</a>
+
+        <h1>Issues and their Solutions with Magisk (FAQs)</h1>
+        <ul>
+            <li>I updated Magisk and now zygisk doesn't work = Uninstall/Restore previous "zygisk compatible" version of magisk app and repatch stock boot image and repeat the flashing process</li>
+            <li>Help!, i flashed a newly patched image but my device doesn't boot = ALWAYS run the <a href="#verity" class="btn-ghost">disable verity command</a> before and after flashing a patched boot image for safety measures!</li>
+        </ul>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="learnfastboot.html" class="nav-item">Fastboot Guide</a>
+            <a href="/transsion/transsionhub.html" class="nav-item">Home</a>
+            <a href="learngsi.html" class="nav-item">GSI Guide</a>
+            <a href="partition.html" class="nav-item">Partitions</a>
+        </nav>
     </body>
 </html>
 

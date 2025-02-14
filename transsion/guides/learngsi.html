@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/files/css/styletrans.css">
     </head>
     <body>
-        <a href="/transsion/guides.html" class="btn-ghost">Back</a>
+        <div class="content">
         <h1 class="center-text">A HELP GUIDE TO GSIs</h1>
         <h3>Skip to Topic</h3>
         <ul>
@@ -40,9 +40,9 @@
         <p>To flash the image, you must successfully boot into fastbootd. To avoid conflicts, you must erase the already existing system image from your previous OS, be it stock or custom. now, to flash the image, for windows users, make sure the file is renamed to 'system.img' for easy use and in the adb/fastboot folder. For linux users, make sure the file is in the directory you open the terminal in.</p>
         <h1 class="center-text">Commands</h1>
         <ul>
-            <li>To erase /system, run <a class=".colored">'fastboot erase system'</a> and it will do as mentioned.</li>
-            <li>To flash the .img file, run <a class=".colored">'fastboot flash system system.img'</a>. If you run into the "not enough space to resize the partition" error, then you will have to run <a class=".colored">'fastboot delete-logical-partition product'</a> for both slot _a and _b and <a class=".colored">'fastboot delete-logical-partition system_ext'</a> for slot _a and _b. Don't worry, these commands are totally safe.</li>
-            <li>After all the packets have successfully been written to the device, you must run <a class=".colored">'fastboot -w'</a> to wipe data (doesn't automatically format) then reboot recovery and factory reset to properly format /data</li>
+            <li>To erase /system, run <a class="colored">'fastboot erase system'</a> and it will do as mentioned.</li>
+            <li>To flash the .img file, run <a class="colored">'fastboot flash system system.img'</a>. If you run into the "not enough space to resize the partition" error, then you will have to run <a class="colored">'fastboot delete-logical-partition product'</a> and <a class="colored">'fastboot delete-logical-partition system_ext'</a>. Don't worry, these commands are totally safe.</li>
+            <li>After all the packets have successfully been written to the device, you must run <a class="colored">'fastboot -w'</a> to wipe data (doesn't automatically format) then reboot recovery and factory reset to properly format /data</li>
             <li>Once done, you can now reboot system and enjoy. It's that simple!</li>
         </ul>
         <p>Now that your device is all booted up, Are you rooted? If no, then refer to this guide on how to root</p>
@@ -52,10 +52,17 @@
         <h1 class="center-text">Things NOT to do and their Consequencies</h1>
         <p>The following are common mistakes made by rookies in this field:</p>
         <ul>
-            <li><h2>Do not dirty flash!</h2><p>Dirty Flashing basicaly flashing a "system.img" update to system right on top of the already existing older build. This new build will contain new security patches which will update upon flashing. The Problem is this is also a form of an Incremental Update which means your device is now updated to a newer security patch of e.g. April Patch > May Patch. While this is a good thing, as a GSI user, it's not all fun and Games. Apparently, flashing directly ontop of the previous build results in an irreversible incremental update (so far irreversible on some Transsion devices) and prevents you from booting a GSI with an older Android Version or Security Patch. This takes effect in mainstream system flashing and DSU booting respectively. Any attempt to flash an older build will result in triggering the Anti-Rollback protocol which prevents older builds from booting. To prevent this from happening, it is advised to run <a class=".colored">fastboot erase system</a> and then flashing your desired build. It is best to make a Backup of your data as you may need to wipe /data in some scenarios. It is recommended to perform a clean flash!</p></li>
+            <li><h2>Do not dirty flash!</h2><p>Dirty Flashing basicaly flashing a "system.img" update to system right on top of the already existing older build. This new build will contain new security patches which will update upon flashing. The Problem is this is also a form of an Incremental Update which means your device is now updated to a newer security patch of e.g. April Patch > May Patch. While this is a good thing, as a GSI user, it's not all fun and Games. Apparently, flashing directly ontop of the previous build results in an irreversible incremental update (so far irreversible on some Transsion devices) and prevents you from booting a GSI with an older Android Version or Security Patch. This takes effect in mainstream system flashing and DSU booting respectively. Any attempt to flash an older build will result in triggering the Anti-Rollback protocol which prevents older builds from booting. To prevent this from happening, it is advised to run <a class="colored">fastboot erase system</a> and then flashing your desired build. It is best to make a Backup of your data as you may need to wipe /data in some scenarios. It is recommended to perform a clean flash!</p></li>
         </ul>
         </div>
-        <a href="/transsion/guides.html" class="btn-ghost">Back</a>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="learnfastboot.html" class="nav-item">Fastboot Guide</a>
+            <a href="/transsion/transsionhub.html" class="nav-item">Home</a>
+            <a href="howtoroot.html" class="nav-item">Rooting Guide</a>
+            <a href="partition.html" class="nav-item">Partitions</a>
+            </nav>
     </body>
 </html>
 

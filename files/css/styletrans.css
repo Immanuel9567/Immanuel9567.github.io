@@ -19,6 +19,8 @@ body {
 
 h1::first-letter { /* change the first letter color of all h1 tags */
 	color: #F1A8FF;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    text-align: center;
 }
 
 .colored { /* basically the same thing as above, but can be done for any tag. */

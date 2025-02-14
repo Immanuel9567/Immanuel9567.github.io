@@ -122,6 +122,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 20px;
+    padding-bottom: 100px;
 }
 
 .content {
@@ -145,6 +146,7 @@ h1, h2, h3 {
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
+    z-index: 1000;
 
 /* Navigation Items */
 .nav-item {
@@ -152,7 +154,7 @@ h1, h2, h3 {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    padding: 8px 15px;
+    padding: 8px 10px;
     border-radius: 10px;
     transition: background 0.3s ease;
 }

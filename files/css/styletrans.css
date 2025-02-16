@@ -3,39 +3,44 @@ html {
 }
 
 body {
-    color: #F9E8FC; /* text color */
-    background-color: #000000; /* no need for an explanation */
-    margin: 0 auto; /* this controls padding...? */
-    max-width: 100%; /* this too...? */
-    font: 1.3em/1.65 sans-serif; /* font size and type */
+    color: #F9E8FC;
+    background-color: #000000;
+    margin: 0 auto;
+    max-width: 100%;
+    font: 1.3em/1.65 sans-serif;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    padding: 10px; /* this also controls padding...? */
+    padding: 10px;
     display: inline-block;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: start;
-    overflow-x: hidden; /* Prevent unintended horizontal scroll */
+    overflow-x: hidden;
 }
 
-h1::first-letter { /* change the first letter color of all h1 tags */
+h1::first-letter {
 	color: #F1A8FF;
 }
 
-.colored { /* basically the same thing as above, but can be done for any tag. */
+.colored {
 	color: #F1A8ff !important;
     text-decoration: none;
     text-shadow: 2px 2px 5px rgba(255, 87, 51, 0.8);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(54, 54, 54);
+    padding: 1px 2px;
+    border-radius: 6px;
+    display: inline-block;
 }
 
 p {
 	padding: 10px;
 }
 
-a { /* customizing the a tag appearance */
-    color: #3d82ad; /* change the color of the link */
+a {
+    color: #3d82ad;
 }
 
-hr { /* make the hr, separator, tag less ugly */
+hr {
     border: none;
     height: 4px;
     border-radius: 5px;
@@ -75,22 +80,22 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px; /* Space between items */
+    gap: 15px;
 }
 
 .resource-item {
     display: flex;
-    align-items: center; /* Align text and image vertically */
-    gap: 10px; /* Space between image and text */
+    align-items: center;
+    gap: 10px;
     margin: 30;
     width: 80%;
     max-width: 900px;
 }
 
 img {
-    max-width: 110px; /* Adjust as needed */
+    max-width: 110px;
     height: auto;
-    display: block; /* Prevent extra inline space */
+    display: block;
 }
 
 .scaled-image {
@@ -106,11 +111,11 @@ img {
 }
 
 .container {
-    max-width: 100%; /* Avoid overflowing */
-    margin: 0 auto; /* Center the container */
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-/* Reset default margin & padding */
+
 * {
     margin: 0;
     padding: 0;
@@ -133,13 +138,13 @@ body {
 h1, h2, h3 {
     text-align: center;
 }
-/* Bottom Navigation Bar */
+
 .bottom-nav {
     position: fixed;
-    bottom: 20px; /* Floating effect */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(34, 34, 34, 0.8); /* Semi-transparent */
+    background: rgba(34, 34, 34, 0.8);
     padding: 10px 20px;
     display: flex;
     gap: 10px;
@@ -147,8 +152,8 @@ h1, h2, h3 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
     z-index: 1000;
+}
 
-/* Navigation Items */
 .nav-item {
     color: #F1A8FF;
     text-decoration: none;
@@ -159,12 +164,12 @@ h1, h2, h3 {
     transition: background 0.3s ease;
 }
 
-/* Hover Effect */
+
 .nav-item:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
     .bottom-nav {
         width: 95%;
@@ -173,7 +178,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: clamp(1.8rem, 5vw, 3rem); /* Adjusts dynamically based on screen width */
+    font-size: clamp(1.8rem, 5vw, 3rem);
     text-align: center;
 }
 
